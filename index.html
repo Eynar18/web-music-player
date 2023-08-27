@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <title>Web Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <div class="player">
+        <div class="detalhes">
+            <div class="img-artista"></div>
+            <div class="nom-musica">Nome da música</div>
+            <div class="nom-artista">Nome do Artista</div>
+        </div>
+
+        <div class="botoes">
+            <div class="voltar" onclick="musicaAnterior()">
+                <i class="fa fa-step-backward fa-2x"></i>
+            </div>
+            <div class="pausar-continuar" onclick="pausarContinuar()">
+                <i class="fa fa-play-circle fa-5x"></i>
+            </div>
+            <div class="pular" onclick="proxMusica()">
+                <i class="fa fa-step-forward fa-2x"></i>
+            </div>
+        </div>
+
+        <div class="slider_container">
+            <div class="tempo-atual">00:00</div>
+            <input type="range" min="1" max="100" value="0" class="procura_slider" onchange="irPara()">
+            <div class="duracao">00:00</div>
+        </div>
+
+        <div class="slider_container">
+            <i class="fa fa-volume-down"></i>
+            <input type="range" min="1" max="100" value="100" class="volume_slider" onchange="setVolume()">
+            <i class="fa fa-volume-up"></i>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
